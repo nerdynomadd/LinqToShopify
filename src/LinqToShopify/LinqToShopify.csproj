@@ -2,6 +2,21 @@
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
+        <OutputType>Library</OutputType>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+        <PackageOutputPath>./../output</PackageOutputPath>
+        <PackageProjectUrl>https://github.com/Kakktuss/LinqToShopify</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/Kakktuss/LinqToShopify</RepositoryUrl>
+
+        <RepositoryType>git</RepositoryType>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+        <Description>Strongly typed Shopify GraphQL queries and mutations requests for IQueryable and Linq lovers.</Description>
+        <Version>1.1.8</Version>
+        <PackageId>LinqToGraphQL</PackageId>
+        <PackageTags>GraphQL Shopify LINQ api</PackageTags>
+        <RootNamespace>LinqToShopify</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
