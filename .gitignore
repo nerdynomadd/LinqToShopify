@@ -1,0 +1,13 @@
+bin/
+obj/
+output/
+
+.idea
+
+example/
+
+src/LinqToShopify/bin
+src/LinqToShopify/obj
+
+example/bin
+example/obj
