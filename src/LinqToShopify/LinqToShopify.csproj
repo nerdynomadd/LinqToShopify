@@ -4,7 +4,7 @@
         <TargetFramework>net5.0</TargetFramework>
         <OutputType>Library</OutputType>
         <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-        <PackageOutputPath>./../output</PackageOutputPath>
+        <PackageOutputPath>./../../output</PackageOutputPath>
         <PackageProjectUrl>https://github.com/Kakktuss/LinqToShopify</PackageProjectUrl>
         <RepositoryUrl>https://github.com/Kakktuss/LinqToShopify</RepositoryUrl>
 
