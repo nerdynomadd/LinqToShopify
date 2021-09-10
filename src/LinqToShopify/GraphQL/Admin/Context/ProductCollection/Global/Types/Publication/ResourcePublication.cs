@@ -1,8 +1,7 @@
 ﻿using System;
 using LinqToGraphQL.Attributes;
-using LinqToShopify.GraphQL.Admin.Context.App.Types.Publication;
 
-namespace LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Types.ResourcePublication
+namespace LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Types.Publication
 {
 	public class ResourcePublication
 	{
@@ -28,6 +27,6 @@ namespace LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Types.Res
 		/// The resource published to the publication.
 		/// </summary>
 		[GraphName("publishable")]
-		public Publishable.Publishable Publishable { get; set; }
+		public Publishable Publishable { get; set; }
 	}
 }

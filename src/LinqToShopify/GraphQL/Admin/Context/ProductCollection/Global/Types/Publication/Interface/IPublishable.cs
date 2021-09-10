@@ -4,7 +4,7 @@ using LinqToShopify.GraphQL.Admin.Context.Common.Types.Id;
 using LinqToShopify.GraphQL.Admin.Context.Global.Node;
 using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Connection;
 
-namespace LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Types.Publishable.Interface
+namespace LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Types.Publication.Interface
 {
 	public interface IPublishable : INode
 	{

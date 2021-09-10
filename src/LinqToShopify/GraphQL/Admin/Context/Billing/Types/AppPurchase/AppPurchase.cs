@@ -1,10 +1,10 @@
 ﻿using System;
 using LinqToGraphQL.Attributes;
-using LinqToShopify.GraphQL.Admin.Context.Billing.Types.Global.AppPurchase.Enum;
+using LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppPurchase.Enum;
 using LinqToShopify.GraphQL.Admin.Context.Common.Types.MoneyV2;
 using LinqToShopify.GraphQL.Admin.Context.Global.Node;
 
-namespace LinqToShopify.GraphQL.Admin.Context.Billing.Types.Global.AppPurchase
+namespace LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppPurchase
 {
 	public class AppPurchase : Node
 	{

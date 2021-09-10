@@ -1,4 +1,4 @@
-﻿namespace LinqToShopify.GraphQL.Admin.Context.Billing.Types.Global.AppPurchase.Enum
+﻿namespace LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppPurchase.Enum
 {
 	public enum AppPurchaseStatus
 	{

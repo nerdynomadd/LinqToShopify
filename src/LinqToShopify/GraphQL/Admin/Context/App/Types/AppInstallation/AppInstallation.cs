@@ -3,7 +3,7 @@ using LinqToGraphQL.Attributes;
 using LinqToGraphQL.Attributes.Method;
 using LinqToShopify.GraphQL.Admin.Context.Billing.Connections;
 using LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppSubscription;
-using LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppSubscription.Query.Input;
+using LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppSubscription.Input;
 using LinqToShopify.GraphQL.Admin.Context.Billing.Types.Global.AppTransaction.Enum;
 using LinqToShopify.GraphQL.Admin.Context.Common.Types.AccessScope;
 using LinqToShopify.GraphQL.Admin.Context.Global.Node;

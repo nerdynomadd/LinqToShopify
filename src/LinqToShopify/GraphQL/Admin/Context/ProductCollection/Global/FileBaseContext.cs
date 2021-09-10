@@ -9,6 +9,7 @@ using LinqToGraphQL.Set.Configuration;
 using LinqToGraphQL.Set.Configuration.Builder;
 using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Types.File.Input;
 using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Types.File.Mutation;
+using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Types.File.Mutation.Result;
 using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Types.Publication.Mutation;
 
 namespace LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global

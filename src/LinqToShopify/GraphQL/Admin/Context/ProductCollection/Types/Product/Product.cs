@@ -14,7 +14,7 @@ using LinqToShopify.GraphQL.Admin.Context.OnlineStore.Types.Seo;
 using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Connections;
 using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Connection;
 using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Types.Media;
-using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Types.Publishable;
+using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Types.Publication;
 using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Types.Collection.Enum;
 using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Types.Product.Enum;
 using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Types.Product.Enum.Image;

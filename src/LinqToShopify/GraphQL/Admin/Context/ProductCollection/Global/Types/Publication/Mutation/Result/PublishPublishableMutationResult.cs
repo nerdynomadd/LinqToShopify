@@ -2,7 +2,7 @@
 using LinqToShopify.GraphQL.Admin.Context.Common.Types.Mutation.Result;
 using LinqToShopify.GraphQL.Admin.Context.Store.Types.Shop;
 
-namespace LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Types.Publication.Mutation
+namespace LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Types.Publication.Mutation.Result
 {
 	public class PublishPublishableMutationResult : UserMutationResult
 	{
@@ -10,7 +10,7 @@ namespace LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Types.Pub
 		/// Resource that has been published.
 		/// </summary>
 		[GraphName("publishable")]
-		public Publishable.Publishable Publishable { get; set; }
+		public Publishable Publishable { get; set; }
 		
 		/// <summary>
 		/// The user's shop.

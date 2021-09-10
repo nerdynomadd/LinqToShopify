@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using LinqToGraphQL.Attributes;
 using LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppSubscription.Enum;
-using LinqToShopify.GraphQL.Admin.Context.Billing.Types.Global.AppSubscription;
 using LinqToShopify.GraphQL.Admin.Context.Global.Node;
 
 namespace LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppSubscription

@@ -1,7 +1,7 @@
 ﻿using LinqToGraphQL.Attributes;
 using LinqToShopify.GraphQL.Admin.Context.Common.Types.Mutation.Result;
 
-namespace LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppPurchaseOneTime.Mutation.Result
+namespace LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppPurchase.OneTime.Mutation.Result
 {
 	public class AppPurchaseOneTimeCreateUserMutationResult : UserMutationResult
 	{

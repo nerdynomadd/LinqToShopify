@@ -8,9 +8,9 @@ using LinqToGraphQL.Set;
 using LinqToGraphQL.Set.Configuration;
 using LinqToGraphQL.Set.Configuration.Builder;
 using LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppCredit.Mutation.Result;
-using LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppPurchaseOneTime.Mutation.Result;
+using LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppPurchase.OneTime.Mutation.Result;
+using LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppSubscription.Input;
 using LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppSubscription.Mutation.Result;
-using LinqToShopify.GraphQL.Admin.Context.Billing.Types.Global.AppSubscription.Input;
 using LinqToShopify.GraphQL.Admin.Context.Common.Types.Id;
 using LinqToShopify.GraphQL.Admin.Context.Common.Types.Money.Input;
 

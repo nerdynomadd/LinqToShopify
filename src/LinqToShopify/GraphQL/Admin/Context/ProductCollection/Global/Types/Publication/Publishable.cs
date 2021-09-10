@@ -4,9 +4,9 @@ using LinqToShopify.GraphQL.Admin.Context.App.Connections;
 using LinqToShopify.GraphQL.Admin.Context.Common.Types.Id;
 using LinqToShopify.GraphQL.Admin.Context.Global.Node;
 using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Connection;
-using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Types.Publishable.Interface;
+using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Types.Publication.Interface;
 
-namespace LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Types.Publishable
+namespace LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Types.Publication
 {
 	public class Publishable : Node, IPublishable
 	{

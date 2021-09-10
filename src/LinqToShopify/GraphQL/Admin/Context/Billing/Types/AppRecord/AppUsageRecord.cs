@@ -1,6 +1,6 @@
 ﻿using System;
 using LinqToGraphQL.Attributes;
-using LinqToShopify.GraphQL.Admin.Context.Billing.Types.Global.AppSubscription;
+using LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppSubscription;
 using LinqToShopify.GraphQL.Admin.Context.Common.Types.MoneyV2;
 using LinqToShopify.GraphQL.Admin.Context.Global.Node;
 

@@ -1,10 +1,10 @@
 ﻿using LinqToGraphQL.Attributes;
 using LinqToShopify.GraphQL.Admin.Context.Billing.Connections;
-using LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppRecord.Query.Input;
+using LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppRecord.Input;
 using LinqToShopify.GraphQL.Admin.Context.Billing.Types.Global.AppPlan;
 using LinqToShopify.GraphQL.Admin.Context.Global.Node;
 
-namespace LinqToShopify.GraphQL.Admin.Context.Billing.Types.Global.AppSubscription
+namespace LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppSubscription
 {
 	public class AppSubscriptionLineItem : Node
 	{

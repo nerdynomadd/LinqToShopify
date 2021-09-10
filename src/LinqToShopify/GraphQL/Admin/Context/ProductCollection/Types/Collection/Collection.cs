@@ -9,7 +9,7 @@ using LinqToShopify.GraphQL.Admin.Context.Metafield.Types;
 using LinqToShopify.GraphQL.Admin.Context.Metafield.Types.Interface;
 using LinqToShopify.GraphQL.Admin.Context.OnlineStore.Types.Seo;
 using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Connections;
-using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Types.Publishable;
+using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Types.Publication;
 using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Types.Collection.Enum;
 using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Types.Collection.Rule;
 using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Types.Product.Enum.Collection;
