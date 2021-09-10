@@ -10,15 +10,15 @@ namespace LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppPricing.Input
 	public class AppRecurringPricingInput
 	{
 		/// <summary>
-		/// The limit a customer can be charged for usage based pricing.
+		/// The billing frequency for the app.
 		/// </summary>
-		[GraphName("cappedAmount")]
-		public MoneyInput CappedAmount { get; set; }
+		[GraphName("interval")]
+		public AppPricingInterval Interval { get; set; }
 		
 		/// <summary>
-		/// The terms and conditions for app usage.
+		/// The amount to be charged to the store every billing interval. The only permitted currency code is USD.
 		/// </summary>
-		[GraphName("terms")]
-		public string Terms { get; set; }
+		[GraphName("price")]
+		public MoneyInput Price { get; set; }
 	}
 }
