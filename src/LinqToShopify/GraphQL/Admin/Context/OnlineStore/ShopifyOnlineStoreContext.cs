@@ -24,9 +24,9 @@ namespace LinqToShopify.GraphQL.Admin.Context.OnlineStore
 	/// Update a merchant's online storefront and its content.
 	/// https://shopify.dev/api/admin/graphql/reference/online-store
 	/// </summary>
-	public class OnlineStoreContext : ShopifyContext
+	public class ShopifyOnlineStoreContext : ShopifyBaseContext
 	{
-		public OnlineStoreContext(string myShopifyName, string authorization) : base(new Dictionary<string, object>
+		internal ShopifyOnlineStoreContext(string myShopifyName, string authorization) : base(new Dictionary<string, object>
 		{
 			["MyShopifyName"] = myShopifyName,
 			["Authorization"] = authorization

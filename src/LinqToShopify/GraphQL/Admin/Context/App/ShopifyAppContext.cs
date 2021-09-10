@@ -14,9 +14,9 @@ using LinqToShopify.GraphQL.Admin.Context.Common.Types.Id;
 
 namespace LinqToShopify.GraphQL.Admin.Context.App
 {
-	public class AppContext : ShopifyContext
+	public class ShopifyAppContext : ShopifyBaseContext
 	{
-		public AppContext(string myShopifyName, string authorization) : base(new Dictionary<string, object>
+		internal ShopifyAppContext(string myShopifyName, string authorization) : base(new Dictionary<string, object>
 		{
 			["MyShopifyName"] = myShopifyName,
 			["Authorization"] = authorization

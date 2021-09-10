@@ -16,9 +16,9 @@ using LinqToShopify.GraphQL.Admin.Context.Common.Types.Money.Input;
 
 namespace LinqToShopify.GraphQL.Admin.Context.Billing
 {
-	public class BillingContext : ShopifyContext
+	public class ShopifyBillingContext : ShopifyBaseContext
 	{
-		internal BillingContext(string myShopifyName, string authorization) : base(new Dictionary<string, object>
+		internal ShopifyBillingContext(string myShopifyName, string authorization) : base(new Dictionary<string, object>
 		{
 			["MyShopifyName"] = myShopifyName,
 			["Authorization"] = authorization

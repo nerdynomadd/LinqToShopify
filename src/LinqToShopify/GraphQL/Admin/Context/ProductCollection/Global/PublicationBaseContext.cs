@@ -13,9 +13,9 @@ using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global.Types.Publica
 
 namespace LinqToShopify.GraphQL.Admin.Context.ProductCollection.Global
 {
-	public class PublicationContext : ShopifyContext
+	public class PublicationBaseContext : ShopifyBaseContext
 	{
-		public PublicationContext(string myShopifyName, string authorization) : base(new Dictionary<string, object>
+		public PublicationBaseContext(string myShopifyName, string authorization) : base(new Dictionary<string, object>
 		{
 			["MyShopifyName"] = myShopifyName,
 			["Authorization"] = authorization

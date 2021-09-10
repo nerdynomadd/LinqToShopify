@@ -9,9 +9,13 @@ using LinqToShopify.GraphQL.Admin.Context.Inventory.Types.Mutation.Result;
 
 namespace LinqToShopify.GraphQL.Admin.Context.Inventory
 {
-	public class InventoryContext : ShopifyContext
+	public class ShopifyInventoryContext : ShopifyBaseContext
 	{
-		public InventoryContext(Dictionary<string, object> contextArguments) : base(contextArguments)
+		internal ShopifyInventoryContext(string myShopifyName, string authorization) : base(new Dictionary<string, object>
+		{
+			["MyShopifyName"] = myShopifyName,
+			["Authorization"] = authorization
+		})
 		{
 		}
 

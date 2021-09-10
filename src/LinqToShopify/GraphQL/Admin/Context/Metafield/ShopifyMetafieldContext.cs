@@ -7,9 +7,9 @@ using LinqToShopify.GraphQL.Admin.Context.Metafield.Types.Mutation.Result;
 
 namespace LinqToShopify.GraphQL.Admin.Context.Metafield
 {
-	public class MetafieldContext : ShopifyContext
+	public class ShopifyMetafieldContext : ShopifyBaseContext
 	{
-		public MetafieldContext(string myShopifyName, string authorization) : base(new Dictionary<string, object>
+		internal ShopifyMetafieldContext(string myShopifyName, string authorization) : base(new Dictionary<string, object>
 		{
 			["MyShopifyName"] = myShopifyName,
 			["Authorization"] = authorization

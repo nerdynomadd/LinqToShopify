@@ -1,39 +1,59 @@
-﻿using System;
-using System.Collections.Generic;
-using LinqToGraphQL.Context;
-using LinqToShopify.Exceptions;
+﻿using LinqToShopify.GraphQL.Admin.Context.App;
+using LinqToShopify.GraphQL.Admin.Context.Billing;
+using LinqToShopify.GraphQL.Admin.Context.Inventory;
+using LinqToShopify.GraphQL.Admin.Context.Metafield;
+using LinqToShopify.GraphQL.Admin.Context.OnlineStore;
+using LinqToShopify.GraphQL.Admin.Context.ProductCollection;
+using LinqToShopify.GraphQL.Admin.Context.Translation;
 
 namespace LinqToShopify.GraphQL
 {
-	public class ShopifyContext : GraphContext
+	public class ShopifyContext
 	{
-		public ShopifyContext(Dictionary<string, object> contextArguments) : base(contextArguments)
+		private readonly string _myShopifyName;
+
+		private readonly string _authorization;
+		
+		public ShopifyContext(string myShopifyName, string authorization) : base()
 		{
-			
+			_myShopifyName = myShopifyName;
+
+			_authorization = authorization;
 		}
 
-		protected static Uri BuildShopUri(string myShopifyUrl)
+		public ShopifyBillingContext Billing()
 		{
-			if (Uri.IsWellFormedUriString(myShopifyUrl, UriKind.Absolute) == false)
-			{
-				//Shopify typically returns the shop URL without a scheme. If the user is storing that as-is, the uri will not be well formed.
-				//Try to fix that by adding a scheme and checking again.
-				if (Uri.IsWellFormedUriString("https://" + myShopifyUrl, UriKind.Absolute) == false)
-				{
-					throw new ShopifyException($"The given {nameof(myShopifyUrl)} cannot be converted into a well-formed URI.");
-				}
-
-				myShopifyUrl = "https://" + myShopifyUrl;
-			}
-
-			var builder = new UriBuilder(myShopifyUrl)
-			{
-				Scheme = "https:",
-				Port = 443,
-				Path = "admin/api/2021-07/graphql.json"
-			};
-
-			return builder.Uri;
+			return new ShopifyBillingContext(_myShopifyName, _authorization);
 		}
-	}
+
+		public ShopifyTranslationContext Translation()
+		{
+			return new ShopifyTranslationContext(_myShopifyName, _authorization);
+		}
+
+		public ShopifyProductContext Product()
+		{
+			return new ShopifyProductContext(_myShopifyName, _authorization);
+		}
+
+		public ShopifyOnlineStoreContext OnlineStore()
+		{
+			return new ShopifyOnlineStoreContext(_myShopifyName, _authorization);
+		}
+
+		public ShopifyMetafieldContext Metafield()
+		{
+			return new ShopifyMetafieldContext(_myShopifyName, _authorization);
+		}
+
+		public ShopifyInventoryContext Inventory()
+		{
+			return new ShopifyInventoryContext(_myShopifyName, _authorization);
+		}
+
+		public ShopifyAppContext App()
+		{
+			return new ShopifyAppContext(_myShopifyName, _authorization);
+		}
+ 	}
 }

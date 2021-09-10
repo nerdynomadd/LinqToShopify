@@ -19,9 +19,9 @@ using LinqToShopify.GraphQL.Admin.Context.Translation.Types.Translation.Mutation
 
 namespace LinqToShopify.GraphQL.Admin.Context.Translation
 {
-	public class TranslationContext : ShopifyContext
+	public class ShopifyTranslationContext : ShopifyBaseContext
 	{
-		public TranslationContext(string myShopifyName, string authorization) : base(new Dictionary<string, object>
+		internal ShopifyTranslationContext(string myShopifyName, string authorization) : base(new Dictionary<string, object>
 		{
 			["MyShopifyName"] = myShopifyName,
 			["Authorization"] = authorization

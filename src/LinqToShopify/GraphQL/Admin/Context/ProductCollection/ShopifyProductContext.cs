@@ -23,9 +23,9 @@ using LinqToShopify.GraphQL.Admin.Context.ProductCollection.Types.Product.Varian
 
 namespace LinqToShopify.GraphQL.Admin.Context.ProductCollection
 {
-	public class ProductContext : ShopifyContext
+	public class ShopifyProductContext : ShopifyBaseContext
 	{
-		public ProductContext(string myShopifyName, string authorization) : base(new Dictionary<string, object>
+		internal ShopifyProductContext(string myShopifyName, string authorization) : base(new Dictionary<string, object>
 		{
 			["MyShopifyName"] = myShopifyName,
 			["Authorization"] = authorization
