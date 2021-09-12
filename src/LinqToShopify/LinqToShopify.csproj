@@ -22,7 +22,6 @@
     <ItemGroup>
         <Folder Include="GraphQL\Admin" />
         <Folder Include="GraphQL\Admin\Context\Access\Types" />
-        <Folder Include="GraphQL\Admin\Context\ProductCollection\Types" />
         <Folder Include="GraphQL\Admin\Context\ProductCollection\Types\Collection\Mutation" />
     </ItemGroup>
 
