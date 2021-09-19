@@ -26,7 +26,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="LinqToGraphQL" Version="1.1.9" />
+      <PackageReference Include="LinqToGraphQL" Version="1.2.0" />
     </ItemGroup>
 
 </Project>
