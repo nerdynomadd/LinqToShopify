@@ -13,7 +13,7 @@
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
         <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
         <Description>Strongly typed Shopify GraphQL queries and mutations requests for IQueryable and Linq lovers.</Description>
-        <Version>1.1.0</Version>
+        <Version>1.1.1</Version>
         <PackageId>LinqToShopify</PackageId>
         <PackageTags>GraphQL Shopify LINQ api</PackageTags>
         <RootNamespace>LinqToShopify</RootNamespace>
@@ -26,7 +26,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="LinqToGraphQL" Version="1.2.4" />
+      <PackageReference Include="LinqToGraphQL" Version="1.2.5" />
     </ItemGroup>
 
 </Project>
