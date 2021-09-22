@@ -99,9 +99,9 @@ namespace LinqToShopify.GraphQL.Admin.Context.Billing
 		[GraphName("appSubscriptionCreate")]
 		public GraphSet<AppSubscriptionCreateUserMutationResult> CreateAppSubscription([GraphNonNullableParameter] string name,
 			[GraphNonNullableParameter] string returnUrl,
-			[GraphNonNullableParameter] List<AppSubscriptionLineItemInput> lineItems,
-			int trialDays,
-			bool test)
+			[GraphNonNullableParameter] [GraphName("[AppSubscriptionLineItemInput!]")] List<AppSubscriptionLineItemInput> lineItems,
+			int? trialDays = null,
+			bool test = false)
 		{
 			return Set<AppSubscriptionCreateUserMutationResult>(new object[]
 			{
