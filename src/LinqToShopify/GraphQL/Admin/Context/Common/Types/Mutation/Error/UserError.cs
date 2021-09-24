@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
+using LinqToGraphQL.Attributes;
 using LinqToShopify.GraphQL.Admin.Context.Global.Mutation.Error;
-using Newtonsoft.Json;
 
 namespace LinqToShopify.GraphQL.Admin.Context.Common.Types.Mutation.Error
 {
@@ -10,13 +10,13 @@ namespace LinqToShopify.GraphQL.Admin.Context.Common.Types.Mutation.Error
 		/// <summary>
 		/// The path to the input field that caused the error.
 		/// </summary>
-		[JsonProperty("field")]
+		[GraphName("field")]
 		public List<string> Field { get; set; }
 
 		/// <summary>
 		/// The error message.
 		/// </summary>
-		[JsonProperty("message")]
+		[GraphName("message")]
 		public string Message { get; set; }
 		
 	}

@@ -1,13 +1,13 @@
-﻿using Newtonsoft.Json;
+﻿using LinqToGraphQL.Attributes;
 
 namespace LinqToShopify.GraphQL.Admin.Context.Common.Types.MoneyV2
 {
 	public class MoneyV2
 	{
-		[JsonProperty("amount")]
+		[GraphName("amount")]
 		public decimal Amount { get; set; }
 		
-		[JsonProperty("currencyCode")]
+		[GraphName("currencyCode")]
 		public CurrencyCode.CurrencyCode CurrencyCode { get; set; }
 	}
 }

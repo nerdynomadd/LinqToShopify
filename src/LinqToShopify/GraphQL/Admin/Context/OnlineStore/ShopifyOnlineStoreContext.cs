@@ -50,7 +50,7 @@ namespace LinqToShopify.GraphQL.Admin.Context.OnlineStore
 			int? first = null,
 			int? last = null,
 			bool reverse = false,
-			[GraphParameterType(typeof(Url))] string url = null)
+			[GraphParameterType(typeof(URL))] string url = null)
 		{
 			return Set<ScriptTagConnection>(new object[]
 			{
@@ -277,7 +277,7 @@ namespace LinqToShopify.GraphQL.Admin.Context.OnlineStore
 		/// <param name="url">The S3 URL of the CSV file.</param>
 		/// <returns></returns>
 		[GraphName("urlRedirectImportCreate")]
-		public GraphSet<CreateUrlRedirectImportUserMutationResult> CreateUrlRedirectImport([GraphNonNullableParameter] [GraphParameterType(typeof(Url))] string url)
+		public GraphSet<CreateUrlRedirectImportUserMutationResult> CreateUrlRedirectImport([GraphNonNullableParameter] [GraphParameterType(typeof(URL))] string url)
 		{
 			return Set<CreateUrlRedirectImportUserMutationResult>(new object[]
 			{

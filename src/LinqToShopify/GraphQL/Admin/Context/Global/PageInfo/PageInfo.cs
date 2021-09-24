@@ -1,14 +1,14 @@
-﻿using Newtonsoft.Json;
+﻿using LinqToGraphQL.Attributes;
 
 namespace LinqToShopify.GraphQL.Admin.Context.Global.PageInfo
 {
 	public class PageInfo
 	{
 		
-		[JsonProperty("hasNextPage")]
+		[GraphName("hasNextPage")]
 		public bool HasNextPage { get; set; }
 		
-		[JsonProperty("hasPreviousPage")]
+		[GraphName("hasPreviousPage")]
 		public bool HasPreviousPage { get; set; }
 		
 	}

@@ -13,6 +13,7 @@ using LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppSubscription.Input;
 using LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppSubscription.Mutation.Result;
 using LinqToShopify.GraphQL.Admin.Context.Common.Types.Id;
 using LinqToShopify.GraphQL.Admin.Context.Common.Types.Money.Input;
+using LinqToShopify.GraphQL.Admin.Context.Common.Types.Url;
 
 namespace LinqToShopify.GraphQL.Admin.Context.Billing
 {
@@ -68,7 +69,7 @@ namespace LinqToShopify.GraphQL.Admin.Context.Billing
 		[GraphName("appPurchaseOneTimeCreate")]
 		public GraphSet<AppPurchaseOneTimeCreateUserMutationResult> CreateAppPurchaseOneTime([GraphNonNullableParameter] string name,
 			[GraphNonNullableParameter] MoneyInput price,
-			[GraphNonNullableParameter] string returnUrl,
+			[GraphNonNullableParameter] [GraphParameterType(typeof(URL))] string returnUrl,
 			bool test)
 		{
 			return Set<AppPurchaseOneTimeCreateUserMutationResult>(new object[]
@@ -98,7 +99,7 @@ namespace LinqToShopify.GraphQL.Admin.Context.Billing
 		/// <returns></returns>
 		[GraphName("appSubscriptionCreate")]
 		public GraphSet<AppSubscriptionCreateUserMutationResult> CreateAppSubscription([GraphNonNullableParameter] string name,
-			[GraphNonNullableParameter] string returnUrl,
+			[GraphNonNullableParameter] [GraphParameterType(typeof(URL))] string returnUrl,
 			[GraphNonNullableParameter] [GraphParameterTypeName("[AppSubscriptionLineItemInput!]")] List<AppSubscriptionLineItemInput> lineItems,
 			int? trialDays = null,
 			bool test = false)
