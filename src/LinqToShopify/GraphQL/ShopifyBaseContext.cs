@@ -12,7 +12,7 @@ namespace LinqToShopify.GraphQL
 			
 		}
 
-		protected static Uri BuildShopUri(string myShopifyUrl)
+		protected static UriBuilder BuildShopUriBuilder(string myShopifyUrl)
 		{
 			if (Uri.IsWellFormedUriString(myShopifyUrl, UriKind.Absolute) == false)
 			{
@@ -33,7 +33,12 @@ namespace LinqToShopify.GraphQL
 				Path = "admin/api/2021-07/graphql.json"
 			};
 
-			return builder.Uri;
+			return builder;
+		}
+		
+		protected static Uri BuildShopUri(string myShopifyUrl)
+		{
+			return BuildShopUriBuilder(myShopifyUrl).Uri;
 		}
 	}
 }
