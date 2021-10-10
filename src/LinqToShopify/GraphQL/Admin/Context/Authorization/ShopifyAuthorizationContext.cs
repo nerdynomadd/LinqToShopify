@@ -9,24 +9,30 @@ namespace LinqToShopify.GraphQL.Admin.Context.Installation
 {
     public class ShopifyAuthorizationContext : ShopifyBaseContext
     {
-        internal ShopifyAuthorizationContext(string myShopifyName, string authorization) : base(new Dictionary<string, object>
+        internal ShopifyAuthorizationContext(string myShopifyName, string shopifyAppApiKey) : base(new Dictionary<string, object>
         {
             ["MyShopifyName"] = myShopifyName,
-            ["Authorization"] = authorization
+            ["ShopifyAppApiKey"] = shopifyAppApiKey
         })
         {
         }
 
         public Uri BuildInstallationUrl(List<AuthorizationScopes> scopes,
+            string redirectUrl)
+        {
+            return BuildInstallationUrl(scopes, redirectUrl, null, null);
+        }
+
+        public Uri BuildInstallationUrl(List<AuthorizationScopes> scopes,
             string redirectUrl,
-            string state = null)
+            string state)
         {
             return BuildInstallationUrl(scopes, redirectUrl, state, null);
         }
 
         public Uri BuildInstallationUrl(List<AuthorizationScopes> scopes,
             string redirectUrl,
-            List<string> grants = null)
+            List<string> grants)
         {
             return BuildInstallationUrl(scopes, redirectUrl, null, grants);
         }
@@ -63,7 +69,7 @@ namespace LinqToShopify.GraphQL.Admin.Context.Installation
 
             var queryParameters = new List<(string, string)>
             {
-                ("client_id", (string) ContextArguments.FirstOrDefault(e => e.Key == "Authorization").Value),
+                ("client_id", (string) ContextArguments.FirstOrDefault(e => e.Key == "ShopifyAppApiKey").Value),
                 ("scope", string.Join(",", scopes)),
                 ("redirect_uri", redirectUrl)
             };

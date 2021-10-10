@@ -5,9 +5,9 @@
     </PropertyGroup>
 
     <PropertyGroup Label="Common assembly attributes">
-        <Version>1.1.6</Version>
-        <FilezVersion>1.1.6.0</FilezVersion>
-        <AssemblyVersion>1.1.6.0</AssemblyVersion>
+        <Version>1.1.7</Version>
+        <FilezVersion>1.1.7.0</FilezVersion>
+        <AssemblyVersion>1.1.7.0</AssemblyVersion>
         <Authors>Mandervelde Benjamin</Authors>
         <Copyright>Copyright (c) 2021 Mandervelde Benjamin</Copyright>
     </PropertyGroup>

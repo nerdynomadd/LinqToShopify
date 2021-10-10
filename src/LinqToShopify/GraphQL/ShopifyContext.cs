@@ -15,18 +15,13 @@ namespace LinqToShopify.GraphQL
 
 		private readonly string _authorization;
 		
-		public ShopifyContext(string myShopifyName, string authorization) : base()
+		public ShopifyContext(string myShopifyName, string authorization)
 		{
 			_myShopifyName = myShopifyName;
 
 			_authorization = authorization;
 		}
 
-		public ShopifyAuthorizationContext Authorization()
-		{
-			return new ShopifyAuthorizationContext(_myShopifyName, _authorization);
-		}
-		
 		public ShopifyBillingContext Billing()
 		{
 			return new ShopifyBillingContext(_myShopifyName, _authorization);
