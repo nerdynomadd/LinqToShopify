@@ -9,7 +9,7 @@ namespace LinqToShopify.GraphQL.Admin.Context.Installation
 {
     public class ShopifyAuthorizationContext : ShopifyBaseContext
     {
-        public ShopifyAuthorizationContext(string myShopifyName, string authorization) : base(new Dictionary<string, object>
+        internal ShopifyAuthorizationContext(string myShopifyName, string authorization) : base(new Dictionary<string, object>
         {
             ["MyShopifyName"] = myShopifyName,
             ["Authorization"] = authorization

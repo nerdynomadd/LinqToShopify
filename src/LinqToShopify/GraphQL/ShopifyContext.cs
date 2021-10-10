@@ -1,5 +1,6 @@
 ﻿using LinqToShopify.GraphQL.Admin.Context.App;
 using LinqToShopify.GraphQL.Admin.Context.Billing;
+using LinqToShopify.GraphQL.Admin.Context.Installation;
 using LinqToShopify.GraphQL.Admin.Context.Inventory;
 using LinqToShopify.GraphQL.Admin.Context.Metafield;
 using LinqToShopify.GraphQL.Admin.Context.OnlineStore;
@@ -21,6 +22,11 @@ namespace LinqToShopify.GraphQL
 			_authorization = authorization;
 		}
 
+		public ShopifyAuthorizationContext Authorization()
+		{
+			return new ShopifyAuthorizationContext(_myShopifyName, _authorization);
+		}
+		
 		public ShopifyBillingContext Billing()
 		{
 			return new ShopifyBillingContext(_myShopifyName, _authorization);
