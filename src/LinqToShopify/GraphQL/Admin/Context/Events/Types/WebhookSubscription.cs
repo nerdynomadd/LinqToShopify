@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using LinqToGraphQL.Attributes;
 using LinqToShopify.GraphQL.Admin.Context.Types.Enum;
 
@@ -7,30 +8,30 @@ namespace LinqToShopify.GraphQL.Admin.Context.Types
     public class WebhookSubscription
     {
         [GraphName("createdAt")]
-        private DateTime createdAt { get; set; }
+        private DateTime CreatedAt { get; set; }
         
-        [GraphName("createdAt")]
-        private WebhookHttpEndpoint endpoint { get; set; }
+        [GraphName("endpoint")]
+        private WebhookHttpEndpoint Endpoint { get; set; }
         
         [GraphName("format")]
-        private WebhookSubscriptionFormat format  { get; set; }
+        private WebhookSubscriptionFormat Format  { get; set; }
         
         [GraphName("id")]
         private string id { get; set; }
         
         [GraphName("includeFields")]
-        private string[] includeFields { get; set; }
+        private List<string> IncludeFields { get; set; }
         
         [GraphName("legacyResourceId")]
-        private ulong legacyResourceId { get; set; }
+        private ulong LegacyResourceId { get; set; }
         
         [GraphName("metafieldNamespaces")]
-        private string[] metafieldNamespaces { get; set; }
+        private List<string> MetafieldNamespaces { get; set; }
         
         [GraphName("topic")]
-        private WebhookSubscriptionTopic topic { get; set; }
+        private WebhookSubscriptionTopic Topic { get; set; }
         
         [GraphName("updatedAt")]
-        private DateTime updatedAt { get; set; }
+        private DateTime UpdatedAt { get; set; }
     }
 }
