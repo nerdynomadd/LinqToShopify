@@ -1,7 +1,12 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
 using LinqToGraphQL.Attributes;
+using LinqToGraphQL.Context.Options.Builder.Configure;
 using LinqToGraphQL.Set;
 using LinqToGraphQL.Set.Configuration;
+using LinqToGraphQL.Set.Configuration.Builder;
 using LinqToShopify.GraphQL.Admin.Context.Common.Types.Id;
 using LinqToShopify.GraphQL.Admin.Context.Connections;
 using LinqToShopify.GraphQL.Admin.Context.Types;
@@ -127,6 +132,36 @@ namespace LinqToShopify.GraphQL.Admin.Context
         
         #endregion
 
+        protected override void Configure(GraphContextConfigureOptionsBuilder graphContextConfigureOptionsBuilder)
+        {
+            var myShopifyUri = BuildShopUri((string) ContextArguments.First(e => e.Key == "MyShopifyName").Value);
+
+            var authenticationHeaderName = "X-Shopify-Access-Token";
+            var authenticationHeaderValue = (string) ContextArguments.First(e => e.Key == "Authorization").Value;
+
+            Action<GraphSetConfigurationBuilder> graphSetConfigurationBuilder = builder =>
+            {
+                builder.WithUrl(myShopifyUri);
+
+                builder.ConfigureHttp(httpBuilder =>
+                {
+                    httpBuilder.AddHeader(authenticationHeaderName, authenticationHeaderValue);
+
+                    httpBuilder.WithMethod(HttpMethod.Post);
+                });
+            };
+			
+            graphContextConfigureOptionsBuilder.ConfigureSet<WebhookSubscriptionConnection>(graphSetConfigurationBuilder);
+			
+            graphContextConfigureOptionsBuilder.ConfigureSet<WebhookSubscription>(graphSetConfigurationBuilder);		
+			
+            graphContextConfigureOptionsBuilder.ConfigureSet<WebhookSubscriptionCreateMutationResult>(graphSetConfigurationBuilder);		
+            
+            graphContextConfigureOptionsBuilder.ConfigureSet<WebhookSubscriptionDeleteMutationResult>(graphSetConfigurationBuilder);
+
+            graphContextConfigureOptionsBuilder.ConfigureSet<WebhookSubscriptionUpdateMutationResult>(graphSetConfigurationBuilder);
+			
+        }
     }
 
 }
