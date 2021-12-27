@@ -9,6 +9,6 @@ namespace LinqToShopify.GraphQL.Admin.Context.Types.Mutation
         [GraphName("userErrors")]
         public List<UserError> UserErrors { get; set; }
         [GraphName("webhookSubscription")]
-        private WebhookSubscription WebhookSubscription { get; set; }
+        public WebhookSubscription WebhookSubscription { get; set; }
     }
 }

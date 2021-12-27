@@ -8,30 +8,30 @@ namespace LinqToShopify.GraphQL.Admin.Context.Types
     public class WebhookSubscription
     {
         [GraphName("createdAt")]
-        private DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
         
         [GraphName("endpoint")]
-        private WebhookHttpEndpoint Endpoint { get; set; }
+        public WebhookHttpEndpoint Endpoint { get; set; }
         
         [GraphName("format")]
-        private WebhookSubscriptionFormat Format  { get; set; }
+        public WebhookSubscriptionFormat Format  { get; set; }
         
         [GraphName("id")]
-        private string id { get; set; }
+        public string id { get; set; }
         
         [GraphName("includeFields")]
-        private List<string> IncludeFields { get; set; }
+        public List<string> IncludeFields { get; set; }
         
         [GraphName("legacyResourceId")]
-        private ulong LegacyResourceId { get; set; }
+        public ulong LegacyResourceId { get; set; }
         
         [GraphName("metafieldNamespaces")]
-        private List<string> MetafieldNamespaces { get; set; }
+        public List<string> MetafieldNamespaces { get; set; }
         
         [GraphName("topic")]
-        private WebhookSubscriptionTopic Topic { get; set; }
+        public WebhookSubscriptionTopic Topic { get; set; }
         
         [GraphName("updatedAt")]
-        private DateTime UpdatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
     }
 }
