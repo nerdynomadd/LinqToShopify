@@ -1,4 +1,5 @@
-﻿using LinqToShopify.GraphQL.Admin.Context.App;
+﻿using LinqToShopify.GraphQL.Admin.Context;
+using LinqToShopify.GraphQL.Admin.Context.App;
 using LinqToShopify.GraphQL.Admin.Context.Billing;
 using LinqToShopify.GraphQL.Admin.Context.Installation;
 using LinqToShopify.GraphQL.Admin.Context.Inventory;
@@ -27,6 +28,11 @@ namespace LinqToShopify.GraphQL
 			return new ShopifyBillingContext(_myShopifyName, _authorization);
 		}
 
+		public ShopifyEventsContext Events()
+		{
+			return new ShopifyEventsContext(_myShopifyName, _authorization);
+		}
+		
 		public ShopifyTranslationContext Translation()
 		{
 			return new ShopifyTranslationContext(_myShopifyName, _authorization);

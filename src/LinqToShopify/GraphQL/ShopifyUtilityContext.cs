@@ -1,4 +1,5 @@
 using LinqToShopify.GraphQL.Admin.Context.Installation;
+using LinqToShopify.GraphQL.Admin.Context.State;
 
 namespace LinqToShopify.GraphQL
 {
@@ -10,10 +11,20 @@ namespace LinqToShopify.GraphQL
 		{
 			_myShopifyName = myShopifyName;
 		}
+
+		public ShopifyStateContext State(string authorization)
+		{
+			return new ShopifyStateContext(_myShopifyName, authorization);
+		}
 		
 		public ShopifyAuthorizationContext Authorization(string appApiKey)
 		{
 			return new ShopifyAuthorizationContext(_myShopifyName, appApiKey);
+		}
+		
+		public ShopifyAuthorizationContext Authorization(string appApiKey, string appApiSecretKey)
+		{
+			return new ShopifyAuthorizationContext(_myShopifyName, appApiKey, appApiSecretKey);
 		}
 	}
 }

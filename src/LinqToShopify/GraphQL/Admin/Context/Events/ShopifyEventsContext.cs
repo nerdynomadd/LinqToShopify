@@ -18,7 +18,7 @@ namespace LinqToShopify.GraphQL.Admin.Context
 {
     public class ShopifyEventsContext : ShopifyBaseContext
     {
-        public ShopifyEventsContext(string myShopifyName, string authorization) : base(new Dictionary<string, object>
+        internal ShopifyEventsContext(string myShopifyName, string authorization) : base(new Dictionary<string, object>
         {
             ["MyShopifyName"] = myShopifyName,
             ["Authorization"] = authorization

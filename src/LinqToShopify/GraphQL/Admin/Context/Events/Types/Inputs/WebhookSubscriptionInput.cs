@@ -10,12 +10,12 @@ namespace LinqToShopify.GraphQL.Admin.Context.Types.Inputs
         public string CallbackUrl { get; set; }
 
         [GraphName("format")]
-        private WebhookSubscriptionFormat Format { get; set; }
+        public WebhookSubscriptionFormat Format { get; set; }
         
         [GraphName("includeFields")] 
-        private List<string> IncludeFields { get; set; }
+        public List<string> IncludeFields { get; set; }
 
         [GraphName("metafieldNamespaces")]
-        private List<string> MetafieldNamespaces { get; set; }
+        public List<string> MetafieldNamespaces { get; set; }
     }
 }
