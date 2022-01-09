@@ -49,7 +49,7 @@ namespace LinqToShopify.GraphQL.Admin.Context.Installation
                 {
                     var index = e.IndexOf("=");
                     var x1 = e.Substring(0, index);
-                    var x2 = e.Substring(index, e.Length-1);
+                    var x2 = e.Substring(index+1, e.Length-index-1);
                     
                     return (x1, x2);
                 })
@@ -79,7 +79,9 @@ namespace LinqToShopify.GraphQL.Admin.Context.Installation
 
         public bool CheckHmacValidity(string query, string appPrivateKey)
         {
-            Dictionary<string, string> queryParameters = query.Split("&").Select(e => (e.Substring(0, e.IndexOf("=")), e.Substring(e.IndexOf("="), e.Length)))
+            Dictionary<string, string> queryParameters = 
+                query.Split("&")
+                    .Select(e => (e.Substring(0, e.IndexOf("=")), e.Substring(e.IndexOf("="), e.Length)))
                 .ToDictionary(e => e.Item1, e => e.Item2);
 
             return CheckHmacValidity(queryParameters, appPrivateKey);
@@ -95,18 +97,22 @@ namespace LinqToShopify.GraphQL.Admin.Context.Installation
             {
                 return false;
             }
-            
+
             var encoding = new ASCIIEncoding();
 
             byte[] keyByte = encoding.GetBytes(appPrivateKey);
 
-            byte[] messageBytes = encoding.GetBytes(string.Concat(queryParameters, "&"));
+            byte[] messageBytes = encoding.GetBytes(string.Join("&", queryParameters));
 
             using var hmacSha256 = new HMACSHA256(keyByte);
 
+            hmacSha256.Key = keyByte;
+            
             byte[] hashMessage = hmacSha256.ComputeHash(messageBytes);
 
-            return Convert.ToBase64String(hashMessage) == hmac;
+            var result = BitConverter.ToString(hashMessage).Replace("-", "");
+            
+            return result.ToUpper() == hmac.ToUpper();
         }
 
         public async Task<AuthorizationResult> AuthorizeInstallation(string code)
