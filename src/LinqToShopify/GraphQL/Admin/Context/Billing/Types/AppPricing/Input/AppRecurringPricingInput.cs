@@ -1,7 +1,7 @@
 ﻿using LinqToGraphQL.Attributes;
 using LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppPricing.Enum;
 using LinqToShopify.GraphQL.Admin.Context.Common.Types.Money.Input;
-
+using LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppSubscriptionDiscount.Input;
 namespace LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppPricing.Input
 {
 	/// <summary>
@@ -20,5 +20,8 @@ namespace LinqToShopify.GraphQL.Admin.Context.Billing.Types.AppPricing.Input
 		/// </summary>
 		[GraphName("price")]
 		public MoneyInput Price { get; set; }
+
+		[GraphName("discount")]
+		public AppSubscriptionDiscountInput Discount { get; set; }
 	}
 }
